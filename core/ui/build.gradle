@@ -1,0 +1,15 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+}
+
+apply from: "../../android_common.gradle"
+
+dependencies {
+    implementation "com.google.android.material:material:$materialVersion"
+
+    implementation "androidx.fragment:fragment-ktx:$androidxFragmentVersion"
+
+    testImplementation "junit:junit:$junitVersion"
+    testImplementation "androidx.test.ext:junit:$androidxJunitVersion"
+}

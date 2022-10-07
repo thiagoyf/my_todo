@@ -1,0 +1,16 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+}
+
+apply from: "../../android_common.gradle"
+
+dependencies {
+    implementation project(":core:route")
+    implementation project(":features:todo")
+
+    implementation "io.insert-koin:koin-android:$koinVersion"
+
+    implementation "androidx.navigation:navigation-fragment-ktx:$androidxNavigationVersion"
+    implementation "androidx.navigation:navigation-ui-ktx:$androidxNavigationVersion"
+}

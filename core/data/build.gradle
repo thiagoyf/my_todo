@@ -1,0 +1,18 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+}
+
+apply from: "../../android_common.gradle"
+
+dependencies {
+    implementation project(":core:model")
+    implementation project(":core:database")
+
+    implementation "io.insert-koin:koin-android:$koinVersion"
+
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$kotlinxCoroutinesVersion"
+
+    testImplementation "junit:junit:$junitVersion"
+    testImplementation "androidx.test.ext:junit:$androidxJunitVersion"
+}

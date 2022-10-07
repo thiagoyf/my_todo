@@ -1,0 +1,22 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+}
+
+apply from: "../../android_common.gradle"
+
+dependencies {
+    implementation project(":core:model")
+
+    implementation "io.insert-koin:koin-android:$koinVersion"
+
+    implementation "androidx.room:room-ktx:$androidxRoomVersion"
+    implementation "androidx.room:room-runtime:$androidxRoomVersion"
+    kapt "androidx.room:room-compiler:$androidxRoomVersion"
+
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$kotlinxCoroutinesVersion"
+
+    testImplementation "junit:junit:$junitVersion"
+    testImplementation "androidx.test.ext:junit:$androidxJunitVersion"
+}

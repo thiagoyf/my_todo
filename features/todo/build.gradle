@@ -12,20 +12,20 @@ dependencies {
     implementation project(":core:route")
     implementation project(":core:ui")
 
-    implementation "io.insert-koin:koin-android:$koinVersion"
+    implementation libs.koin
 
-    implementation "androidx.core:core-ktx:$androidxCoreVersion"
-    implementation "androidx.appcompat:appcompat:$androidxAppcompatVersion"
+    implementation libs.androidx.core
+    implementation libs.androidx.appcompat
 
-    implementation "androidx.recyclerview:recyclerview:$androidxRecyclerviewVersion"
-    implementation "androidx.coordinatorlayout:coordinatorlayout:$androidxCoordinatorLayoutVersion"
-    implementation "androidx.constraintlayout:constraintlayout:$androidxConstraintLayoutVersion"
+    implementation libs.androidx.recyclerview
+    implementation libs.androidx.coordinatorlayout
+    implementation libs.androidx.constraintlayout
 
-    implementation "com.google.android.material:material:$materialVersion"
+    implementation libs.material
 
-    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$androidxLifecycleVersion"
-    implementation "androidx.lifecycle:lifecycle-runtime-ktx:$androidxLifecycleVersion"
+    implementation libs.androidx.lifecycle.viewmodel
+    implementation libs.androidx.lifecycle.runtime
 
-    implementation "androidx.navigation:navigation-fragment-ktx:$androidxNavigationVersion"
-    implementation "androidx.navigation:navigation-ui-ktx:$androidxNavigationVersion"
+    implementation libs.androidx.navigation.fragment
+    implementation libs.androidx.navigation.ui
 }

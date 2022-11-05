@@ -19,22 +19,21 @@ dependencies {
     implementation project(":core:navigation")
     implementation project(":core:ui")
 
-    implementation "androidx.core:core-ktx:$androidxCoreVersion"
+    implementation libs.androidx.core
 
-    implementation "androidx.appcompat:appcompat:$androidxAppcompatVersion"
+    implementation libs.androidx.appcompat
 
-    implementation "androidx.fragment:fragment:$androidxFragmentVersion"
-    implementation "androidx.fragment:fragment-ktx:$androidxFragmentVersion"
+    implementation libs.androidx.fragment
 
-    implementation "androidx.constraintlayout:constraintlayout:$androidxConstraintLayoutVersion"
+    implementation libs.androidx.constraintlayout
 
-    implementation "androidx.navigation:navigation-fragment-ktx:$androidxNavigationVersion"
-    implementation "androidx.navigation:navigation-ui-ktx:$androidxNavigationVersion"
+    implementation libs.androidx.navigation.fragment
+    implementation libs.androidx.navigation.ui
 
-    implementation "com.google.android.material:material:$materialVersion"
+    implementation libs.material
 
-    implementation "io.insert-koin:koin-android:$koinVersion"
+    implementation libs.koin
 
-    testImplementation "junit:junit:$junitVersion"
-    testImplementation "androidx.test.ext:junit:$androidxJunitVersion"
+    testImplementation libs.junit
+    testImplementation libs.androidx.junit
 }

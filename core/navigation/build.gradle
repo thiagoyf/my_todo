@@ -9,8 +9,8 @@ dependencies {
     implementation project(":core:route")
     implementation project(":features:todo")
 
-    implementation "io.insert-koin:koin-android:$koinVersion"
+    implementation libs.koin
 
-    implementation "androidx.navigation:navigation-fragment-ktx:$androidxNavigationVersion"
-    implementation "androidx.navigation:navigation-ui-ktx:$androidxNavigationVersion"
+    implementation libs.androidx.navigation.fragment
+    implementation libs.androidx.navigation.ui
 }

@@ -6,10 +6,10 @@ plugins {
 apply from: "../../android_common.gradle"
 
 dependencies {
-    implementation "com.google.android.material:material:$materialVersion"
+    implementation libs.material
 
-    implementation "androidx.fragment:fragment-ktx:$androidxFragmentVersion"
+    implementation libs.androidx.fragment
 
-    testImplementation "junit:junit:$junitVersion"
-    testImplementation "androidx.test.ext:junit:$androidxJunitVersion"
+    testImplementation libs.junit
+    testImplementation libs.androidx.junit
 }

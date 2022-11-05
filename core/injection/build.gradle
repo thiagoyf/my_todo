@@ -11,5 +11,5 @@ dependencies {
     implementation project(":core:navigation")
     implementation project(":features:todo")
 
-    implementation "io.insert-koin:koin-android:$koinVersion"
+    implementation libs.koin
 }

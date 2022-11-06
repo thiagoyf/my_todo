@@ -2,6 +2,7 @@ plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-kapt'
+    id 'com.google.dagger.hilt.android'
 }
 
 apply from: "../android_common.gradle"
@@ -15,7 +16,6 @@ android {
 }
 
 dependencies {
-    implementation project(":core:injection")
     implementation project(":core:navigation")
     implementation project(":core:ui")
 
@@ -30,10 +30,15 @@ dependencies {
     implementation libs.androidx.navigation.fragment
     implementation libs.androidx.navigation.ui
 
-    implementation libs.material
+    implementation libs.hilt.android
+    kapt libs.hilt.compiler
 
-    implementation libs.koin
+    implementation libs.material
 
     testImplementation libs.junit
     testImplementation libs.androidx.junit
+}
+
+kapt {
+    correctErrorTypes true
 }

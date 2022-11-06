@@ -5,10 +5,13 @@ import androidx.lifecycle.viewModelScope
 import com.thiagoyf.data.repository.TodoRepository
 import com.thiagoyf.model.data.Todo
 import com.thiagoyf.todo.add.model.TodoObservable
+import dagger.hilt.android.lifecycle.HiltViewModel
+import java.util.UUID
+import javax.inject.Inject
 import kotlinx.coroutines.launch
-import java.util.*
 
-class TodoAddViewModel(
+@HiltViewModel
+class TodoAddViewModel @Inject constructor(
     private val todoRepository: TodoRepository
 ) : ViewModel() {
 

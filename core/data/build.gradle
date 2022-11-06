@@ -1,6 +1,8 @@
 plugins {
     id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+    id 'com.google.dagger.hilt.android'
 }
 
 apply from: "../../android_common.gradle"
@@ -9,10 +11,15 @@ dependencies {
     implementation project(":core:model")
     implementation project(":core:database")
 
-    implementation libs.koin
+    implementation libs.hilt.android
+    kapt libs.hilt.compiler
 
     implementation libs.kotlinx.coroutines
     
     testImplementation libs.junit
     testImplementation libs.androidx.junit
+}
+
+kapt {
+    correctErrorTypes true
 }

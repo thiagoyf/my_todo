@@ -5,12 +5,13 @@ import com.thiagoyf.database.dao.TodoDao
 import com.thiagoyf.database.model.TodoEntity
 import com.thiagoyf.database.model.asTodo
 import com.thiagoyf.model.data.Todo
+import javax.inject.Inject
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.launch
 
-class TodoRepositoryImpl(
+class TodoRepositoryImpl @Inject constructor(
     private val todoDao: TodoDao,
     private val externalScope: CoroutineScope
 ): TodoRepository {

@@ -6,19 +6,20 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import com.thiagoyf.route.extentions.navigateTo
 import com.thiagoyf.route.todo.TodoRoutes
-import com.thiagoyf.todo.R
 import com.thiagoyf.todo.databinding.FragmentTodoListBinding
 import com.thiagoyf.todo.list.adapters.TodoListAdapter
 import com.thiagoyf.todo.list.model.TodoListUiState
 import com.thiagoyf.ui.SpaceItemDecoration
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
-import org.koin.androidx.viewmodel.ext.android.viewModel
 
+@AndroidEntryPoint
 class TodoListFragment : Fragment() {
 
     private var _binding: FragmentTodoListBinding? = null
@@ -26,7 +27,7 @@ class TodoListFragment : Fragment() {
 
     private lateinit var todoListAdapter: TodoListAdapter
 
-    private val todoListViewModel: TodoListViewModel by viewModel()
+    private val todoListViewModel: TodoListViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

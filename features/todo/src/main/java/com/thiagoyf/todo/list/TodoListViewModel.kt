@@ -5,12 +5,15 @@ import androidx.lifecycle.viewModelScope
 import com.thiagoyf.data.repository.TodoRepository
 import com.thiagoyf.model.data.Todo
 import com.thiagoyf.todo.list.model.TodoListUiState
+import dagger.hilt.android.lifecycle.HiltViewModel
+import javax.inject.Inject
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.stateIn
 
-class TodoListViewModel(
+@HiltViewModel
+class TodoListViewModel @Inject constructor(
     private val todoRepository: TodoRepository
 ) : ViewModel() {
 

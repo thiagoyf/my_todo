@@ -2,6 +2,7 @@ plugins {
     id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-kapt'
+    id 'com.google.dagger.hilt.android'
 }
 
 apply from: "../../android_common.gradle"
@@ -12,14 +13,15 @@ dependencies {
     implementation project(":core:route")
     implementation project(":core:ui")
 
-    implementation libs.koin
-
     implementation libs.androidx.core
     implementation libs.androidx.appcompat
 
     implementation libs.androidx.recyclerview
     implementation libs.androidx.coordinatorlayout
     implementation libs.androidx.constraintlayout
+
+    implementation libs.hilt.android
+    kapt libs.hilt.compiler
 
     implementation libs.material
 
@@ -28,4 +30,8 @@ dependencies {
 
     implementation libs.androidx.navigation.fragment
     implementation libs.androidx.navigation.ui
+}
+
+kapt {
+    correctErrorTypes true
 }

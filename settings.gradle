@@ -16,7 +16,6 @@ rootProject.name = "My Todo"
 include ':app'
 include ':core:data'
 include ':core:database'
-include ':core:injection'
 include ':core:model'
 include ':core:navigation'
 include ':core:ui'

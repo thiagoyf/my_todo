@@ -6,8 +6,6 @@ plugins {
 apply from: "../../android_common.gradle"
 
 dependencies {
-    implementation libs.koin
-
     implementation libs.androidx.navigation.fragment
     implementation libs.androidx.navigation.ui
 }

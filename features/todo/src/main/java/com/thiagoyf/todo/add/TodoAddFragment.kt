@@ -1,24 +1,17 @@
 package com.thiagoyf.todo.add
 
 import android.os.Bundle
-import android.text.Editable
-import android.text.TextWatcher
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Lifecycle
-import androidx.lifecycle.lifecycleScope
-import androidx.lifecycle.repeatOnLifecycle
-import com.thiagoyf.model.data.Todo
+import androidx.fragment.app.viewModels
 import com.thiagoyf.route.extentions.popBackStack
 import com.thiagoyf.todo.R
-import com.thiagoyf.todo.add.model.TodoAddUiState
 import com.thiagoyf.todo.databinding.FragmentTodoAddBinding
-import kotlinx.coroutines.launch
-import org.koin.androidx.viewmodel.ext.android.viewModel
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class TodoAddFragment : Fragment() {
 
     private var _binding: FragmentTodoAddBinding? = null
@@ -26,7 +19,7 @@ class TodoAddFragment : Fragment() {
 
     private val todoId: String? by lazy { arguments?.getString("id") }
 
-    private val todoAddViewModel: TodoAddViewModel by viewModel()
+    private val todoAddViewModel: TodoAddViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

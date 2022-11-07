@@ -12,7 +12,6 @@ import io.mockk.impl.annotations.MockK
 import io.mockk.verify
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.flowOf
-import kotlinx.coroutines.launch
 import kotlinx.coroutines.test.TestScope
 import kotlinx.coroutines.test.advanceUntilIdle
 import kotlinx.coroutines.test.runTest
@@ -100,7 +99,7 @@ class TodoRepositoryImplTest {
         coJustRun { todoDao.insert(any()) }
 
         // When
-        launch { todoRepositoryImpl.add(todo) }
+        todoRepositoryImpl.add(todo)
         advanceUntilIdle()
 
         // Then
@@ -117,7 +116,7 @@ class TodoRepositoryImplTest {
         coJustRun { todoDao.insert(any()) }
 
         // When
-        launch { todoRepositoryImpl.update(todo) }
+        todoRepositoryImpl.update(todo)
         advanceUntilIdle()
 
         // Then
